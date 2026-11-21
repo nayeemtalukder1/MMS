@@ -1,0 +1,6 @@
+{
+  "name": "UTMMS — University Teacher Meeting Management System",
+  "description": "Centralized university platform for academic meeting scheduling, availability conflict detection, integrated WebRTC audio/video conferencing, attendance tracking, minutes, and decision management.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

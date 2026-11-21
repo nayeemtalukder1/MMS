@@ -1,0 +1,811 @@
+University Teacher Meeting Management System (UTMMS)
+Project Type: Web-Based University Management System
+Category: University Administration & Academic Management
+Platform: Responsive Web Application
+Architecture: Modular Full-Stack Architecture
+Deployment: VPS / Cloud Server
+Database: MongoDB with Mongoose
+Development Approach: Agile and Modular Development
+________________________________________
+1. Project Overview
+The University Teacher Meeting Management System (UTMMS) is a centralized web-based platform designed to digitize and simplify meeting management activities within a university.
+The system will provide an integrated environment where university administrators, department heads, meeting organizers, administrative officers, and teachers can organize, schedule, conduct, and manage academic and administrative meetings.
+Traditional university meeting arrangements often depend on phone calls, messaging applications, emails, and spreadsheets. These disconnected communication methods can create scheduling conflicts, communication delays, difficulties in managing attendance, and challenges in maintaining official meeting records.
+UTMMS will address these problems through a centralized platform that combines meeting management, teacher availability, smart scheduling, digital invitations, attendance tracking, meeting documentation, and decision management.
+An important feature of UTMMS will be its integrated online audio and video meeting functionality.
+Teachers will be able to join scheduled meetings directly from the website without requiring a separate video conferencing application. Participants will be able to communicate through their microphones and cameras, view other participants, and participate in real-time academic discussions.
+The platform will support both physical and online meetings, providing a unified meeting management experience.
+The primary objective is to make university meeting administration more organized, transparent, accessible, and efficient.
+2. Project Objectives
+The main objectives are:
+1.	Digitize traditional university meeting management.
+2.	Centralize university meeting information and communication.
+3.	Simplify meeting creation and participant selection.
+4.	Reduce scheduling conflicts through availability-based scheduling.
+5.	Recommend suitable meeting times automatically.
+6.	Automate invitations, reminders, and notifications.
+7.	Provide integrated real-time audio and video communication.
+8.	Allow teachers to join online meetings directly from the website.
+9.	Maintain accurate digital attendance records.
+10.	Organize meeting agendas, minutes, and documents.
+11.	Track meeting decisions and assigned responsibilities.
+12.	Generate administrative reports and analytics.
+13.	Provide secure role-based access to university information.
+14.	Build a scalable system that supports multiple faculties and departments within one university.
+3. Target Users and Role Management
+The platform will support four primary user roles.
+3.1 Super Administrator
+Responsible for overall university platform management.
+Permissions and Features:
+•	Manage university information.
+•	Create and manage faculties.
+•	Create and manage departments.
+•	Create administrator accounts.
+•	Manage user roles and permissions.
+•	Activate or deactivate user accounts.
+•	Assign department heads.
+•	View all university meetings.
+•	Monitor online meeting activities.
+•	Configure system settings.
+•	Monitor system activity logs.
+•	Access university-wide reports.
+•	Manage notification configurations.
+3.2 Department Head
+Responsible for managing academic and administrative meetings within their department.
+Permissions and Features:
+•	View department teachers.
+•	Create departmental meetings.
+•	Invite department teachers.
+•	Check teacher availability.
+•	Review meeting responses.
+•	Approve or confirm meeting schedules.
+•	Manage meeting agendas.
+•	Review meeting attendance.
+•	Publish meeting minutes.
+•	Monitor assigned action items.
+•	Generate departmental reports.
+•	Manage departmental meeting documents.
+3.3 Meeting Organizer / Administrative Officer
+Responsible for organizing and maintaining meeting activities.
+Permissions and Features:
+•	Create new meetings.
+•	Select meeting participants.
+•	Propose meeting dates and times.
+•	Check participant availability.
+•	Upload meeting documents.
+•	Send meeting invitations.
+•	Monitor participant responses.
+•	Update meeting information.
+•	Start and manage online meetings.
+•	Manage meeting agendas.
+•	Record attendance.
+•	Prepare meeting minutes.
+•	Record meeting decisions.
+•	Assign action items.
+•	Track task completion.
+3.4 University Teacher
+Teachers will have individual accounts and personalized dashboards.
+Permissions and Features:
+•	View upcoming meetings.
+•	View meeting invitations.
+•	Accept or reject invitations.
+•	Request schedule changes.
+•	Submit availability.
+•	View meeting agendas.
+•	Download meeting documents.
+•	Join online meetings.
+•	Enable or disable microphones.
+•	Enable or disable cameras.
+•	View other meeting participants.
+•	Participate in real-time audio/video discussions.
+•	View attendance history.
+•	Access previous meeting minutes.
+•	View assigned tasks.
+•	Update action-item progress.
+•	Receive meeting notifications.
+4. Core System Modules
+Module 1: Authentication and User Management
+Provides secure access to the platform.
+Features:
+•	Login and logout.
+•	Forgot password.
+•	Password reset.
+•	User profile management.
+•	Role-based access control (RBAC).
+•	Account activation and deactivation.
+•	Secure authentication.
+•	Session management.
+•	Password security.
+•	User activity tracking.
+Module 2: University and Department Management
+Manages the university's organizational structure.
+Features:
+•	University profile management.
+•	Faculty management.
+•	Department management.
+•	Department head assignment.
+•	Teacher management.
+•	Designation management.
+•	Department-wise teacher directory.
+•	User assignment to departments.
+•	Organizational hierarchy management.
+Organizational Structure:
+University → Faculties → Departments → Department Heads and Teachers
+Module 3: Meeting Management
+The main module for creating and managing university meetings.
+Features:
+•	Create new meetings.
+•	Meeting title and description.
+•	Meeting category.
+•	Meeting organizer.
+•	Select faculty and department.
+•	Select meeting participants.
+•	Meeting date and time.
+•	Meeting duration.
+•	Physical meeting location.
+•	Meeting type selection.
+•	Online meeting room generation.
+•	Recurring meetings.
+•	Edit and cancel meetings.
+•	Meeting status management.
+•	Meeting history.
+Meeting Types:
+1.	Physical Meeting.
+2.	Online Meeting.
+3.	Hybrid Meeting.
+Suggested Meeting Categories:
+•	Departmental Meeting.
+•	Faculty Meeting.
+•	Academic Committee Meeting.
+•	Examination Committee Meeting.
+•	Research Committee Meeting.
+•	Administrative Meeting.
+•	Emergency Meeting.
+•	General Meeting.
+Module 4: Teacher Availability Management
+Allows teachers to communicate their available time slots.
+Features:
+•	Weekly availability calendar.
+•	Custom date availability.
+•	Available and unavailable time slots.
+•	Availability updates.
+•	Organizer availability overview.
+•	Participant availability comparison.
+•	Calendar-based availability management.
+•	Recurring availability settings.
+The system will identify suitable time slots based on the availability of selected participants.
+Module 5: Smart Scheduling and Conflict Detection
+This module will help organizers select appropriate meeting times.
+Features:
+•	Detect overlapping meetings.
+•	Check teacher availability.
+•	Identify unavailable participants.
+•	Recommend suitable meeting times.
+•	Display participant availability percentages.
+•	Compare multiple proposed time slots.
+•	Notify organizers about scheduling conflicts.
+•	Prioritize slots where the maximum number of required participants are available.
+Example:
+A meeting requires five teachers.
+Teacher	10:00 AM	11:00 AM	12:00 PM
+Teacher A	Available	Available	Busy
+Teacher B	Busy	Available	Available
+Teacher C	Available	Available	Available
+Teacher D	Available	Busy	Available
+Teacher E	Available	Available	Available
+Availability	4/5	4/5	4/5
+The organizer can review the suggested time slots and make the final scheduling decision.
+The system will not automatically force a meeting time. The organizer will retain final control over scheduling.
+Module 6: Meeting Invitation and Response Management
+Handles communication between organizers and participants.
+Features:
+•	Send meeting invitations.
+•	In-system notifications.
+•	Email notifications.
+•	Accept invitations.
+•	Reject invitations.
+•	Request alternative schedules.
+•	Participant response tracking.
+•	Meeting update notifications.
+•	Meeting cancellation notifications.
+•	Automatic meeting reminders.
+•	Online meeting joining information.
+Module 7: Online Audio and Video Meeting System
+This module will provide integrated real-time communication inside UTMMS.
+Teachers will be able to join online meetings directly through their browsers without installing additional conferencing software.
+Core Features:
+A. Audio Communication
+•	Real-time microphone communication.
+•	Microphone on/off control.
+•	Mute and unmute functionality.
+•	Speaker selection where supported by the browser.
+•	Microphone permission management.
+•	Audio-only meeting support.
+•	Audio connection status.
+•	Network quality indicators.
+B. Video Communication
+•	Real-time webcam communication.
+•	Camera on/off control.
+•	Display participant video streams.
+•	Active speaker identification.
+•	Participant video grid.
+•	Dynamic participant layout.
+•	Full-screen video mode.
+•	Video connection status.
+•	Automatic adaptation to network conditions.
+C. Meeting Room Management
+•	Automatically generate a unique meeting room.
+•	Secure meeting joining links.
+•	Join meeting from the dashboard.
+•	Waiting room functionality.
+•	Participant admission.
+•	Participant list.
+•	Meeting host controls.
+•	Join and leave notifications.
+•	Meeting start and end controls.
+•	Reconnection after temporary network failure.
+•	Meeting room access restrictions.
+D. Participant Controls
+•	Mute/unmute microphone.
+•	Enable/disable camera.
+•	View participant list.
+•	Leave meeting.
+•	Host-controlled participant removal.
+•	Host-controlled participant muting.
+•	Manage waiting participants.
+•	Display connection status.
+E. Additional Online Meeting Features
+•	Screen sharing.
+•	Presentation sharing.
+•	Responsive meeting interface.
+•	Audio-only fallback when video connectivity is poor.
+•	Meeting duration display.
+•	Online participant attendance.
+•	Meeting room access based on invitations and permissions.
+F. Meeting Room Interface
+The online meeting interface will include:
+•	Main video display area.
+•	Participant video grid.
+•	Microphone button.
+•	Camera button.
+•	Screen sharing button.
+•	Participant list.
+•	Meeting information.
+•	Full-screen control.
+•	Leave meeting button.
+Important Technical Approach:
+The online communication system will use WebRTC technology for real-time audio and video transmission.
+A Selective Forwarding Unit (SFU), such as LiveKit, will manage multi-participant audio/video streams efficiently.
+Socket-based real-time communication will support meeting signaling and room-related events where required.
+The server will generate secure, time-limited meeting access tokens after verifying the user's identity, meeting invitation, and permissions.
+A STUN/TURN configuration will help establish connections across different networks and restrictive NAT environments.
+The proposed architecture will support:
+•	One-to-one audio/video communication.
+•	Multi-participant university meetings.
+•	Screen sharing.
+•	Secure meeting room access.
+•	Audio-only participation.
+Video recording and automated transcription will be considered optional future enhancements rather than mandatory first-release functionality.
+Module 8: Meeting Agenda Management
+Allows organizers to prepare meeting topics before the meeting.
+Features:
+•	Add agenda items.
+•	Edit agenda items.
+•	Delete agenda items.
+•	Set agenda order.
+•	Assign discussion topics.
+•	Attach supporting documents.
+•	Share agendas with participants.
+•	Update agendas before meetings.
+•	Display agendas during online meetings.
+Module 9: Attendance Management
+Maintains digital attendance records for both physical and online meetings.
+Features:
+•	Manual attendance marking.
+•	Automatic online join/leave event logging.
+•	Present, absent, late, and excused statuses.
+•	Meeting-wise attendance records.
+•	Participant-wise attendance history.
+•	Attendance duration tracking.
+•	Attendance reports.
+•	Export attendance records.
+Online Attendance Workflow:
+1.	A teacher joins an online meeting.
+2.	The system records the joining time.
+3.	The system tracks the participant's connection and leaving events.
+4.	The system calculates the total connected duration.
+5.	The organizer reviews the attendance.
+6.	The organizer can confirm or correct the final attendance status.
+Joining a meeting will not automatically guarantee full attendance. Final attendance rules will be configurable by the university.
+Future Enhancement:
+•	QR-based physical attendance verification.
+Module 10: Meeting Minutes and Documentation
+Maintains official records of university meetings.
+Features:
+•	Create meeting minutes.
+•	Edit meeting minutes.
+•	Publish meeting minutes.
+•	Upload PDF and DOCX files.
+•	Store meeting documents.
+•	Attach supporting files.
+•	Restrict access to authorized users.
+•	Search previous meeting records.
+•	Download meeting documentation.
+•	Maintain meeting documentation history.
+Module 11: Decision and Action Tracking
+Ensures that meeting decisions are followed up.
+Features:
+•	Record meeting decisions.
+•	Create action items.
+•	Assign tasks to teachers.
+•	Set deadlines.
+•	Update task progress.
+•	Monitor pending tasks.
+•	Mark completed tasks.
+•	Add task comments.
+•	View responsibility history.
+•	Notify responsible teachers about deadlines.
+Example:
+Decision	Assigned To	Deadline	Status
+Prepare examination routine	Teacher A	15 December	Pending
+Submit course outline	Teacher B	18 December	In Progress
+Review research proposal	Teacher C	20 December	Completed
+Module 12: Notification Center
+Provides centralized notifications.
+Features:
+•	New meeting invitation.
+•	Meeting reminders.
+•	Schedule changes.
+•	Meeting cancellations.
+•	Agenda updates.
+•	Minutes published.
+•	New assigned tasks.
+•	Task deadline reminders.
+•	Online meeting starting reminders.
+•	Meeting room access notifications.
+Notification Channels:
+•	In-app notifications.
+•	Email notifications.
+Module 13: Reports and Analytics
+Provides administrative insights into meeting activities.
+Features:
+•	Total meetings.
+•	Upcoming meetings.
+•	Completed meetings.
+•	Cancelled meetings.
+•	Department-wise meetings.
+•	Teacher participation statistics.
+•	Attendance statistics.
+•	Online versus physical meeting statistics.
+•	Pending action items.
+•	Completed action items.
+•	Meeting history.
+•	Monthly and yearly reports.
+•	Department performance summaries.
+5. Dashboard Structure
+Each user will have a personalized dashboard according to their role.
+5.1 Super Administrator Dashboard
+•	Total teachers.
+•	Total departments.
+•	Total faculties.
+•	Total meetings.
+•	Active users.
+•	Upcoming meetings.
+•	Online meetings.
+•	Recent activities.
+•	Department-wise meeting statistics.
+•	System activity overview.
+5.2 Department Head Dashboard
+•	Department teachers.
+•	Upcoming departmental meetings.
+•	Pending meeting invitations.
+•	Meeting attendance.
+•	Pending decisions.
+•	Assigned action items.
+•	Department meeting reports.
+•	Availability overview.
+5.3 Teacher Dashboard
+•	Today's meetings.
+•	Upcoming meetings.
+•	Pending invitations.
+•	Availability calendar.
+•	Join online meeting button.
+•	Recent meeting minutes.
+•	Assigned action items.
+•	Notifications.
+•	Attendance history.
+5.4 Meeting Organizer Dashboard
+•	Meetings created.
+•	Meetings awaiting confirmation.
+•	Pending responses.
+•	Scheduling conflicts.
+•	Upcoming online meetings.
+•	Meeting documents.
+•	Attendance management.
+•	Meeting agenda and minutes.
+•	Action-item overview.
+6. Complete System Workflows
+6.1 Meeting Creation and Scheduling Workflow
+1.	Organizer logs into the system.
+2.	Organizer selects Create Meeting.
+3.	Organizer enters meeting details.
+4.	Selects meeting type: Physical, Online, or Hybrid.
+5.	Selects faculty, department, and participants.
+6.	Proposes meeting dates and times.
+7.	System checks participant availability.
+8.	System identifies conflicts and recommends suitable slots.
+9.	Organizer selects and confirms a schedule.
+10.	For online meetings, the system generates a secure meeting room.
+11.	Invitations are sent to participants.
+12.	Teachers accept, reject, or request schedule changes.
+13.	Organizer reviews participant responses.
+14.	Meeting is finalized.
+6.2 Online Meeting Workflow
+1.	Organizer opens the scheduled meeting.
+2.	Organizer selects Start Meeting.
+3.	The system activates the meeting room.
+4.	Invited teachers receive meeting notifications.
+5.	Participants select Join Meeting.
+6.	The browser requests microphone and camera permissions.
+7.	Participants enter the meeting room.
+8.	The system establishes WebRTC connections.
+9.	Participants communicate through audio and video.
+10.	Participants can mute microphones, disable cameras, or share screens.
+11.	The organizer manages meeting participants.
+12.	The system records joining and leaving events.
+13.	Organizer ends the meeting.
+14.	Meeting attendance information is saved.
+6.3 Meeting Execution and Documentation Workflow
+1.	Participants access meeting information.
+2.	Organizer records or verifies attendance.
+3.	Meeting agenda is discussed.
+4.	Organizer records important discussions.
+5.	Meeting decisions are documented.
+6.	Action items are assigned.
+7.	Meeting minutes are prepared.
+8.	Minutes are published.
+9.	Participants receive notifications.
+6.4 Post-Meeting Workflow
+1.	Teachers access published meeting minutes.
+2.	Assigned teachers view their responsibilities.
+3.	Teachers update task progress.
+4.	Department heads monitor progress.
+5.	Completed activities are recorded.
+6.	Historical meeting reports remain available.
+7. Proposed Technology Stack
+The system will use a modern full-stack architecture.
+Layer	Technology
+Frontend	Next.js / React
+Programming Language	TypeScript
+Styling	Tailwind CSS
+UI Components	shadcn/ui
+Icons	Lucide React
+Backend	Node.js / Next.js API
+Database	MongoDB
+Database ODM	Mongoose
+Authentication	Better Auth
+Real-Time Communication	WebRTC
+Video/Audio Infrastructure	LiveKit SFU
+Real-Time Events	Socket.IO / WebSocket
+STUN/TURN	STUN and TURN infrastructure
+Email	Resend / SMTP
+Form Validation	Zod
+File Management	Secure Object Storage / Cloudinary
+Calendar	FullCalendar
+Charts	Recharts
+Version Control	Git and GitHub
+Deployment	VPS / Cloud Server
+Reverse Proxy	Nginx
+Process Management	PM2 / Docker
+Technology selection notes:
+•	Next.js will manage the frontend and application APIs.
+•	Node.js services will support backend operations and real-time integrations.
+•	MongoDB and Mongoose will manage application data.
+•	Better Auth will provide authentication.
+•	LiveKit will handle multi-participant audio and video communication.
+•	WebRTC will provide real-time media transmission.
+•	Socket.IO will support real-time application events where necessary.
+•	Nginx will manage reverse proxy and secure routing.
+•	Docker may be used to simplify deployment and service management.
+The architecture will remain modular so that each feature can be developed, tested, and maintained independently.
+8. System Architecture
+The platform will follow a modular client-server architecture.
+Main Architecture Layers:
+1. Presentation Layer
+•	Next.js frontend.
+•	Responsive dashboards.
+•	Meeting management interfaces.
+•	Calendar interface.
+•	Online audio/video meeting interface.
+2. Application Layer
+•	Authentication services.
+•	User and role management.
+•	Meeting management services.
+•	Scheduling engine.
+•	Invitation services.
+•	Attendance services.
+•	Documentation services.
+•	Reporting services.
+3. Real-Time Communication Layer
+•	WebRTC media communication.
+•	LiveKit SFU.
+•	Meeting room management.
+•	Secure room token generation.
+•	Real-time participant events.
+•	STUN/TURN connectivity.
+4. Data Layer
+•	MongoDB.
+•	Mongoose.
+•	User records.
+•	Meeting records.
+•	Availability records.
+•	Attendance records.
+•	Documentation records.
+•	Notification records.
+•	Audit logs.
+5. Infrastructure Layer
+•	VPS / Cloud server.
+•	Nginx reverse proxy.
+•	HTTPS.
+•	Docker / PM2.
+•	Database backups.
+•	Monitoring and logging.
+•	LiveKit deployment or managed LiveKit infrastructure.
+Architecture Flow
+User Browser → Next.js Frontend → Backend API → MongoDB
+User Browser → Secure Meeting Token API → LiveKit Server → Other Participants
+Backend API → Notification Service → Email / In-App Notifications
+The application database will store meeting information and participant records. Audio and video media streams will be handled separately by the real-time communication infrastructure rather than being stored directly in MongoDB.
+9. Database Design
+The proposed MongoDB database will contain the following collections:
+1.	users
+2.	roles
+3.	faculties
+4.	departments
+5.	designations
+6.	meetings
+7.	meeting_participants
+8.	teacher_availability
+9.	meeting_agendas
+10.	attendance
+11.	meeting_minutes
+12.	meeting_documents
+13.	meeting_decisions
+14.	action_items
+15.	notifications
+16.	activity_logs
+17.	meeting_sessions
+Important Collection Relationships
+•	One university can contain multiple faculties.
+•	One faculty can contain multiple departments.
+•	One department can contain multiple teachers.
+•	One user can have one or more authorized roles, subject to institutional policy.
+•	One meeting can have multiple participants.
+•	One teacher can participate in multiple meetings.
+•	One meeting can contain multiple agenda items.
+•	One meeting can generate multiple decisions.
+•	One decision can generate multiple action items.
+•	One teacher can have multiple assigned action items.
+•	One online meeting can have multiple participant sessions.
+•	One meeting can have multiple attendance records.
+Additional Online Meeting Data
+The meeting record may include:
+•	meetingType
+•	meetingRoomId
+•	meetingProvider
+•	roomStatus
+•	scheduledStartTime
+•	scheduledEndTime
+•	actualStartTime
+•	actualEndTime
+The meeting session collection may include:
+•	meetingId
+•	userId
+•	joinedAt
+•	leftAt
+•	connectionStatus
+•	audioEnabled
+•	videoEnabled
+•	screenSharingStatus
+The system will store meeting metadata and participation events. It will not store raw audio/video streams in MongoDB.
+10. UI/UX Design Requirements
+The website will follow a modern, clean, and professional university management interface.
+Design Requirements:
+•	Fully responsive design.
+•	Desktop, tablet, and mobile support.
+•	Clean dashboard layouts.
+•	Sidebar navigation.
+•	Role-based menu visibility.
+•	Calendar-based meeting views.
+•	Search and filtering.
+•	Data tables with pagination.
+•	Clear meeting status indicators.
+•	Modal-based meeting creation.
+•	User-friendly forms.
+•	Accessible color contrast.
+•	Consistent design system.
+Suggested Primary Colors: Teal / Deep Blue.
+Online Meeting UI Requirements
+The meeting interface should provide:
+•	Large video display area.
+•	Participant video grid.
+•	Microphone control.
+•	Camera control.
+•	Screen sharing control.
+•	Participant sidebar.
+•	Meeting information.
+•	Connection status.
+•	Full-screen mode.
+•	Leave meeting button.
+The interface should remain simple and accessible for university teachers with different levels of technical experience.
+11. Security and Access Control
+The platform will implement the following security measures:
+•	Secure password hashing.
+•	Role-based permissions.
+•	Server-side authorization.
+•	Protected API routes.
+•	Input validation.
+•	Secure file access.
+•	Session security.
+•	HTTPS encryption.
+•	Audit logging.
+•	Database backups.
+•	Rate limiting.
+•	Protection against common web vulnerabilities.
+•	Secure online meeting room access.
+•	Time-limited meeting access tokens.
+•	Meeting participant authorization.
+•	Restricted access to meeting documents.
+•	Secure media transport through WebRTC encryption.
+Only authorized participants should be able to enter private online meeting rooms.
+Meeting recording, if introduced in the future, will require explicit institutional policies, participant notification, appropriate permissions, and secure storage.
+12. Development Phases and Timeline
+The estimated development timeline is approximately 18–20 weeks.
+Phase	Activities	Estimated Duration
+Phase 1	Requirement analysis and planning	1 week
+Phase 2	UI/UX and database design	2 weeks
+Phase 3	Authentication and user management	1 week
+Phase 4	University and department management	1 week
+Phase 5	Meeting management and scheduling	2 weeks
+Phase 6	Availability and conflict detection	1 week
+Phase 7	Invitations and notifications	1 week
+Phase 8	Audio/video meeting integration	2–3 weeks
+Phase 9	Attendance and documentation	2 weeks
+Phase 10	Decisions and action tracking	1 week
+Phase 11	Reports and analytics	1 week
+Phase 12	Testing, optimization, and deployment	2 weeks
+Estimated Total: 18–20 weeks.
+The timeline assumes one primary developer and may change depending on institutional feedback, server infrastructure, testing requirements, and video conferencing integration complexity.
+13. Testing and Quality Assurance
+The platform will undergo multiple testing stages.
+Functional Testing
+•	Authentication.
+•	User permissions.
+•	Department management.
+•	Meeting creation.
+•	Meeting scheduling.
+•	Invitations.
+•	Attendance.
+•	Documentation.
+•	Action tracking.
+Audio/Video Testing
+•	Microphone access.
+•	Camera access.
+•	One-to-one audio/video.
+•	Multi-participant meetings.
+•	Screen sharing.
+•	Participant admission.
+•	Mute and camera controls.
+•	Reconnection after network interruptions.
+•	Browser compatibility.
+•	Mobile responsiveness.
+•	STUN/TURN connectivity.
+Security Testing
+•	Role-based access verification.
+•	Unauthorized meeting access prevention.
+•	Token validation.
+•	API authorization.
+•	File access restrictions.
+•	Input validation.
+Performance Testing
+•	Concurrent user handling.
+•	Meeting room performance.
+•	Database query optimization.
+•	API response times.
+•	Network quality and media performance.
+14. Deployment and Infrastructure
+The system will be deployed on a VPS or cloud infrastructure.
+Proposed Deployment Components:
+•	Linux-based VPS.
+•	Next.js application server.
+•	Node.js backend services.
+•	MongoDB database.
+•	LiveKit server.
+•	TURN server infrastructure.
+•	Nginx reverse proxy.
+•	SSL certificate.
+•	Domain and DNS configuration.
+•	Automated backup system.
+•	Monitoring and logging.
+Infrastructure Considerations
+Real-time video and audio require additional server resources and network bandwidth.
+The required infrastructure will depend on:
+•	Number of simultaneous meetings.
+•	Participants per meeting.
+•	Video resolution.
+•	Audio/video bitrate.
+•	Screen-sharing usage.
+•	Network conditions.
+•	Whether LiveKit is self-hosted or managed.
+The production deployment must include an appropriately configured UDP media path and TURN fallback where necessary. HTTPS alone is not sufficient for reliable real-time media connectivity.
+15. Final Project Deliverables
+The project will deliver:
+1.	Fully functional University Teacher Meeting Management System.
+2.	Responsive web interface.
+3.	Secure authentication system.
+4.	Role-based access control.
+5.	Super Administrator dashboard.
+6.	Department Head dashboard.
+7.	Meeting Organizer dashboard.
+8.	Teacher dashboard.
+9.	University and department management.
+10.	Meeting creation and scheduling.
+11.	Teacher availability management.
+12.	Smart scheduling and conflict detection.
+13.	Meeting invitations and notifications.
+14.	Integrated real-time audio communication.
+15.	Integrated real-time video communication.
+16.	Secure online meeting rooms.
+17.	Screen-sharing functionality.
+18.	Digital attendance management.
+19.	Meeting agenda management.
+20.	Meeting minutes and documentation.
+21.	Decision and action tracking.
+22.	Reports and analytics.
+23.	MongoDB database architecture.
+24.	Source code and Git repository.
+25.	Deployment and configuration documentation.
+26.	User documentation.
+16. Future Enhancements
+The following features may be considered for future versions:
+•	AI-powered meeting-time recommendations.
+•	Google Calendar integration.
+•	Microsoft Outlook integration.
+•	QR-based attendance.
+•	Online meeting recording.
+•	AI-generated meeting summaries.
+•	Voice-to-text meeting transcription.
+•	AI-powered meeting minutes generation.
+•	Mobile application.
+•	Advanced academic analytics.
+•	Multi-university support.
+•	Meeting chat.
+•	Breakout rooms.
+•	Advanced screen-sharing controls.
+•	Calendar synchronization.
+17. Project Success Criteria
+The project will be considered successfully implemented when:
+•	All four primary user roles can access their authorized features.
+•	University faculties and departments can be managed.
+•	Users can create, update, and manage meetings.
+•	Teachers can submit availability.
+•	Scheduling conflicts are correctly identified.
+•	Meeting invitations and responses work correctly.
+•	Authorized participants can join online meetings.
+•	Audio and video communication work reliably.
+•	Participants can control their microphones and cameras.
+•	Screen sharing works in supported browsers.
+•	Online attendance events are recorded.
+•	Meeting agendas and minutes can be managed.
+•	Attendance records can be maintained.
+•	Decisions and action items can be tracked.
+•	Notifications work as intended.
+•	Reports display accurate information.
+•	The platform passes functional, security, and usability testing.
+18. Conclusion
+The University Teacher Meeting Management System (UTMMS) aims to modernize university meeting administration through a centralized, secure, and responsive digital platform.
+By integrating university administration, teacher availability, smart scheduling, invitations, real-time audio and video communication, attendance tracking, documentation, and decision management, the system will provide a complete environment for academic collaboration.
+The integrated online meeting functionality will allow teachers to communicate directly through the platform, reducing dependency on separate conferencing applications and keeping meeting activities within a unified management system.
+The proposed modular architecture, MongoDB database, Next.js frontend, and WebRTC-based communication infrastructure will provide a foundation for future expansion.
+The final objective is to develop a comprehensive university meeting management platform that connects academic staff, simplifies administrative responsibilities, and improves communication and collaboration across the university.
+
